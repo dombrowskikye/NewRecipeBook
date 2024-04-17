@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/baseline_add_circle_outline_24"
+        android:title="Add"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_breakfast"
+        android:title="Breakfast"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_lunch"
+        android:title="Lunch"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_dinner"
+        android:title="Dinner"
+        app:showAsAction="never" />
+</menu>

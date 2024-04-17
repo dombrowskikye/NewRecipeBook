@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Recipe Book</string>
+    <string name="themeTitle">Themes</string>
+    <string name="blueText">Blue Text</string>
+    <string name="redText">Red Text</string>
+    <string name="greenText">Green Text</string>
+    <string name="purpleText">Purple Text</string>
+
+    <string name="purpleBanner">Purple Banner</string>
+    <string name="greenBanner">Green Banner</string>
+    <string name="redBanner">Red Banner</string>
+    <string name="blueBanner">Blue Banner</string>
+    <string name="textLabel">Text Color</string>
+    <string name="textBanner">Button Color</string>
+
+    <string name="addRecipeTitle">Add Recipe</string>
+    <string name="inputRecipeName">Enter Recipe Title</string>
+    <string name="inputRecipeIngredients">Enter Ingredients</string>
+    <string name="inputRecipeInstructions">Enter Instructions</string>
+    <string name="breakfastButton">Breakfast</string>
+    <string name="lunchButton">Lunch</string>
+    <string name="dinnerButton">Dinner</string>
+
+    <string name="clearButton">Clear</string>
+    <string name="addButton">Add</string>
+    <string name="cancelButton">Cancel</string>
+
+    <string name="recipeName">Recipe Name</string>
+    <string name="ingredients">Ingredients</string>
+
+
+
+
+
+</resources>
