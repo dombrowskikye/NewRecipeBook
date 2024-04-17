@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
-        setContentView(R.layout.activity_main);
+
 
         list = new ArrayList<Recipe>();
         recipeAdapter = new RecipeAdapter(this, list);
