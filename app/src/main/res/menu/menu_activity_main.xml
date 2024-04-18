@@ -19,4 +19,8 @@
         android:id="@+id/action_dinner"
         android:title="Dinner"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_themes"
+        android:title="Themes"
+        app:showAsAction="never" />
 </menu>

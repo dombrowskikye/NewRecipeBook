@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
             addContactDialog.show(getSupportFragmentManager(), "");
         }
 
+        if (id == R.id.action_themes){
+            ChangeThemes changeThemes = new ChangeThemes();
+            changeThemes.show(getSupportFragmentManager(), "");
+        }
 
         return true;
     }

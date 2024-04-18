@@ -23,8 +23,8 @@
 
     <RadioGroup
         android:id="@+id/textColor"
-        android:layout_width="279dp"
-        android:layout_height="195dp"
+        android:layout_width="293dp"
+        android:layout_height="245dp"
         android:layout_marginStart="67dp"
         android:layout_marginTop="67dp"
         android:layout_marginEnd="67dp"
@@ -55,6 +55,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/purpleText" />
+
+        <RadioButton
+            android:id="@+id/blackText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/blackText" />
     </RadioGroup>
 
     <RadioGroup
@@ -114,5 +120,15 @@
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textColor" />
+
+    <Button
+        android:id="@+id/returnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/returnButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
