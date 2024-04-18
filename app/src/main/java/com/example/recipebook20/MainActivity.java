@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,8 +17,7 @@ import com.example.recipebook20.databinding.ActivityMainBinding;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
     private ActivityMainBinding binding;
     private ArrayList<Recipe> list;
     private RecipeAdapter recipeAdapter;
@@ -29,9 +30,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
 
-
         list = new ArrayList<Recipe>();
-        recipeAdapter = new RecipeAdapter(this, list);
+
+        list.add(new Recipe("Tacos","These are the Instructions","These are the Ingredients","Lunch"));
+        recipeAdapter = new RecipeAdapter(this, list,this);
 
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -72,7 +74,27 @@ public class MainActivity extends AppCompatActivity {
     public void addRecipe (Recipe recipe) {
         list.add(recipe);
         recipeAdapter.notifyDataSetChanged();
-
-        //Log.i ("info", "Number of Contacts" + list.size());
     }
+
+    public void showContactDialog(Recipe recipe) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        ViewRecipeDialog viewRecipeDialog = ViewRecipeDialog.newInstance(recipe);
+        viewRecipeDialog.show(fragmentManager, "");
+    }
+
+    public void onRecipeClick(int position) {
+        Recipe clickedRecipe = list.get(position);
+        showContactDialog(clickedRecipe);
+    }
+
+    public void deleteRecipe(Recipe recipe) {
+        int position = list.indexOf(recipe);
+        list.remove(recipe);
+        recipeAdapter.notifyItemRemoved(position);
+        Toast.makeText(this, "Recipe Deleted", Toast.LENGTH_SHORT).show();
+    }
+
+
+
+
 } //End of class

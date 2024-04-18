@@ -13,10 +13,15 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ListItemHo
 
     private MainActivity mainActivity;
     private ArrayList<Recipe> list;
-    public RecipeAdapter (MainActivity mainActivity, ArrayList<Recipe> list) {
+    private OnRecipeClickListener recipeClickListener;
+    public interface OnRecipeClickListener {
+        void onRecipeClick(int position);
+    }
 
+    public RecipeAdapter (MainActivity mainActivity, ArrayList<Recipe> list, OnRecipeClickListener listener) {
         this.mainActivity = mainActivity;
         this.list = list;
+        this.recipeClickListener = listener;
     }
     public RecipeAdapter.ListItemHolder onCreateViewHolder (ViewGroup parent, int viewType ){
         View listItem = LayoutInflater.from (parent.getContext())
@@ -48,7 +53,10 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ListItemHo
         }
 
         public void onClick (View view) {
-
+            int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                recipeClickListener.onRecipeClick(position);
+            }
         }
     }
 
