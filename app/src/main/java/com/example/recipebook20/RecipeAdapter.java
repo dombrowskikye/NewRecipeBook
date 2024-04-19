@@ -40,6 +40,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ListItemHo
         return  list.size();
     }
 
+
     public class ListItemHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private TextView textViewName;

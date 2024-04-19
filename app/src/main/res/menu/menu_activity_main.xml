@@ -8,6 +8,10 @@
         android:title="Add"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/action_all"
+        android:title="All Recipes"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/action_breakfast"
         android:title="Breakfast"
         app:showAsAction="never" />

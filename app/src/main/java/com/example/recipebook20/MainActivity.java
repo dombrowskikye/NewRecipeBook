@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnRecipeClickListener {
     private ActivityMainBinding binding;
     private ArrayList<Recipe> list;
+
+    private ArrayList<Recipe> originalList;
     private RecipeAdapter recipeAdapter;
 
 
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         setSupportActionBar(binding.toolbar);
 
         list = new ArrayList<Recipe>();
+
+        originalList = new ArrayList<Recipe>();
+
+        originalList.add(new Recipe("Tacos","These are the Instructions","These are the Ingredients","Lunch"));
 
         list.add(new Recipe("Tacos","These are the Instructions","These are the Ingredients","Lunch"));
         recipeAdapter = new RecipeAdapter(this, list,this);
@@ -73,11 +79,42 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
             changeThemes.show(getSupportFragmentManager(), "");
         }
 
+        if (id == R.id.action_all){
+            list.clear();
+            list.addAll(originalList);
+            recipeAdapter.notifyDataSetChanged();
+        }
+
+        if (id == R.id.action_breakfast){
+            filterRecipes("Breakfast");
+        }
+
+        if (id == R.id.action_lunch){
+            filterRecipes("Lunch");
+        }
+
+        if (id == R.id.action_dinner){
+            filterRecipes("Dinner");
+        }
+
         return true;
+    }
+
+    public void filterRecipes(String recipeType){
+        ArrayList<Recipe> filteredList = new ArrayList<>();
+        for (Recipe recipe : originalList){
+            if (recipe.getRecipeType().equals(recipeType)){
+                filteredList.add(recipe);
+            }
+        }
+        list.clear();
+        list.addAll(filteredList);
+        recipeAdapter.notifyDataSetChanged();
     }
 
     public void addRecipe (Recipe recipe) {
         list.add(recipe);
+        originalList.add(recipe);
         recipeAdapter.notifyDataSetChanged();
     }
 
