@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         binding.content.recyclerView.setAdapter(recipeAdapter);
 
 
+
         binding.fab.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

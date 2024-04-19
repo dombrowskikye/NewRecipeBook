@@ -1,20 +1,21 @@
 <resources>
     <string name="app_name">Recipe Book</string>
     <string name="themeTitle">Themes</string>
-    <string name="blueText">Blue Text</string>
-    <string name="redText">Red Text</string>
-    <string name="greenText">Green Text</string>
-    <string name="purpleText">Purple Text</string>
-    <string name="blackText">Black Text</string>
+    <string name="blueText">Blue Background</string>
+    <string name="redText">Red Background</string>
+    <string name="greenText">Green Background</string>
+    <string name="purpleText">Purple Background</string>
+    <string name="blackText">White Background</string>
 
-    <string name="purpleBanner">Purple Banner</string>
-    <string name="greenBanner">Green Banner</string>
-    <string name="redBanner">Red Banner</string>
-    <string name="blueBanner">Blue Banner</string>
-    <string name="textLabel">Text Color</string>
-    <string name="textBanner">Button/Banner Color</string>
+    <string name="purpleBanner">Purple</string>
+    <string name="greenBanner">Green</string>
+    <string name="redBanner">Red</string>
+    <string name="blueBanner">Blue</string>
+    <string name="textLabel">Background Color</string>
+    <string name="textBanner">Banner Color</string>
 
     <string name="returnButton">Return</string>
+    <string name="themeButton">Apply Changes</string>
 
     <string name="addRecipeTitle">Add Recipe</string>
     <string name="inputRecipeName">Enter Recipe Title</string>
