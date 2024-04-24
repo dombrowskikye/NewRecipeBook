@@ -32,6 +32,7 @@ public class ViewRecipeDialog extends DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         binding = DialogViewRecipeBinding.inflate(LayoutInflater.from(getContext()));
 
+        binding.imageView.setImageResource(recipe.getRecipeImage());
         binding.textViewName.setText(recipe.getName());
         binding.textViewInstructions.setText(recipe.getInstructions());
         binding.textViewIngredients.setText(recipe.getIngredients());

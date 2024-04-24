@@ -44,8 +44,9 @@ public class AddRecipeDialog extends DialogFragment {
                             else if (binding.dinnerButton.isChecked())
                                 recipeType = "Dinner";
 
+                            int img = binding.pickImage.getId();
 
-                            Recipe recipe = new Recipe (name, instructions, ingredients, recipeType);
+                            Recipe recipe = new Recipe (name, instructions, ingredients, recipeType, img);
 
                             MainActivity mainActivity = (MainActivity) getActivity();
                             mainActivity.addRecipe(recipe);
@@ -54,6 +55,7 @@ public class AddRecipeDialog extends DialogFragment {
 
                         }
                         else if (id == R.id.action_clear) {
+                            binding.pickImage.setImageDrawable(null);
                             binding.inputRecipeName.setText("");
                             binding.inputRecipeInstructions.setText("");
                             binding.inputRecipeIngredients.setText("");
@@ -110,14 +112,14 @@ public class AddRecipeDialog extends DialogFragment {
                         else if (binding.dinnerButton.isChecked())
                             recipeType = "Dinner";
 
+                        int img = binding.pickImage.getId();
 
-                        Recipe recipe = new Recipe (name, instructions, ingredients, recipeType);
+                        Recipe recipe = new Recipe (name, instructions, ingredients, recipeType, img);
 
                         MainActivity mainActivity = (MainActivity) getActivity();
                         mainActivity.addRecipe (recipe);
 
                         dismiss();
-
 
                     }
                 }
