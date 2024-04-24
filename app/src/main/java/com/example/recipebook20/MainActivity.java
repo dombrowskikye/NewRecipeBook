@@ -49,6 +49,21 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                 "2 tsp each of cumin\n" +
                 "1 1/2 cups of beef broth...","Lunch"));
 
+        originalList.add(new Recipe("Turkey Wrap","In a medium bowl,\n" +
+                "combine scallion,\n" +
+                "goat cheese, yogurt, \n" +
+                "and 2 teaspoons oil; \n" +
+                "season with salt and pepper.",
+                "1 scallion, thinly sliced \n" +
+                        "4 oz. crumbled goat cheese \n" +
+                        "4 oz. plain whole-milk Greek \n" +
+                        "yogurt \n" +
+                        "3 tsp. extra-virgin olive oil, \n" +
+                        "divided \n" +
+                        "Kosher salt \n" +
+                        "Freshly ground black pepper \n" +
+                        "4 loosely packed arugula...","Dinner"));
+
         list.add(new Recipe("Turkey Wrap","In a medium bowl,\n" +
                 "combine scallion,\n" +
                 "goat cheese, yogurt, \n" +
@@ -64,6 +79,17 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                 "Freshly ground black pepper \n" +
                 "4 loosely packed arugula...","Dinner"));
 
+        originalList.add(new Recipe("Hamburger","Add ground beef and a chopped\n" +
+                "onion to a skillet over\n"+
+                "medium-high heat...",
+                "1 chopped onion\n" +
+                        "2 TBSP minced garlic\n" +
+                        "1 tsp each of salt and pepper\n" +
+                        "1/2 tsp cayenne\n" +
+                        "4 tsp chili powder\n" +
+                        "2 tsp each of cumin\n" +
+                        "1lb of 80% lean beef...","Dinner"));
+
         list.add(new Recipe("Hamburger","Add ground beef and a chopped\n" +
                 "onion to a skillet over\n"+
                 "medium-high heat...",
@@ -74,6 +100,15 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                         "4 tsp chili powder\n" +
                         "2 tsp each of cumin\n" +
                         "1lb of 80% lean beef...","Dinner"));
+
+        originalList.add(new Recipe("Pancakes","Add batter to large\n" +
+                "mixing bowl\n"+
+                "along with 1 egg...",
+                "flour\n" +
+                        "baking powder\n" +
+                        "Sugar\n" +
+                        "Salt\n" +
+                        "Milk...","Breakfast"));
 
         list.add(new Recipe("Pancakes","Add batter to large\n" +
                 "mixing bowl\n"+
@@ -115,8 +150,8 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         int id = item.getItemId();
 
         if (id == R.id.action_add) {
-            AddRecipeDialog addContactDialog = new AddRecipeDialog();
-            addContactDialog.show(getSupportFragmentManager(), "");
+            AddRecipeDialog addRecipeDialog = new AddRecipeDialog();
+            addRecipeDialog.show(getSupportFragmentManager(), "");
         }
 
         if (id == R.id.action_themes){
@@ -163,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
         recipeAdapter.notifyDataSetChanged();
     }
 
-    public void showContactDialog(Recipe recipe) {
+    public void showRecipeDialog(Recipe recipe) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         ViewRecipeDialog viewRecipeDialog = ViewRecipeDialog.newInstance(recipe);
         viewRecipeDialog.show(fragmentManager, "");
@@ -171,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
 
     public void onRecipeClick(int position) {
         Recipe clickedRecipe = list.get(position);
-        showContactDialog(clickedRecipe);
+        showRecipeDialog(clickedRecipe);
     }
 
     public void deleteRecipe(Recipe recipe) {
