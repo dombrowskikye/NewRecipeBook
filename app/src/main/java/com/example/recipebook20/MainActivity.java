@@ -38,22 +38,52 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
 
         originalList.add(new Recipe("Tacos","These are the Instructions","These are the Ingredients","Lunch"));
 
-        list.add(new Recipe("Tacos","Add ground beef and a chopped onion to a skillet over medium high heat. Once beef is cooked through drain the grease grease. Add all seasonings and beef broth.\n" +
-                "Bring to a boil then lower the heat. Cover and let simmer for about 20 minutes until the liquid has reduced.\n" +
-                "In a separate pan, heat the skillet over medium heat and add some oil to the skillet. Lay out a few of the tortillas and tip them with shredded Monterey Jack cheese. Top each one with a spoonful of taco meat. Fold the tortillas over and cook on both sides until golden brown and crispy.\n" +
-                "Lay the tacos out on paper towels to absorb any extra grease. Top tacos with your favorite toppings and enjoy!","2 lb ground beef\n" +
+        list.add(new Recipe("Tacos","Add ground beef and a chopped\n" +
+                "onion to a skillet over\n"+
+                "medium-high heat...",
                 "1 chopped onion\n" +
                 "2 TBSP minced garlic\n" +
                 "1 tsp each of salt and pepper\n" +
                 "1/2 tsp cayenne\n" +
                 "4 tsp chili powder\n" +
-                "2 tsp each of cumin and dried cilantro\n" +
-                "1 1/2 cups of beef broth\n" +
-                "White corn tortillas\n" +
-                "1 tbsp oil\n" +
-                "Shredded Monterey Jack cheese\n" +
-                "Taco Toppings sour cream,\n" +
-                "Pico de Gallo, taco sauce, shredded lettuce","Lunch"));
+                "2 tsp each of cumin\n" +
+                "1 1/2 cups of beef broth...","Lunch"));
+
+        list.add(new Recipe("Turkey Wrap","In a medium bowl,\n" +
+                "combine scallion,\n" +
+                "goat cheese, yogurt, \n" +
+                "and 2 teaspoons oil; \n" +
+                "season with salt and pepper.",
+                "1 scallion, thinly sliced \n" +
+                "4 oz. crumbled goat cheese \n" +
+                "4 oz. plain whole-milk Greek \n" +
+                        "yogurt \n" +
+                "3 tsp. extra-virgin olive oil, \n" +
+                        "divided \n" +
+                "Kosher salt \n" +
+                "Freshly ground black pepper \n" +
+                "4 loosely packed arugula...","Dinner"));
+
+        list.add(new Recipe("Hamburger","Add ground beef and a chopped\n" +
+                "onion to a skillet over\n"+
+                "medium-high heat...",
+                "1 chopped onion\n" +
+                        "2 TBSP minced garlic\n" +
+                        "1 tsp each of salt and pepper\n" +
+                        "1/2 tsp cayenne\n" +
+                        "4 tsp chili powder\n" +
+                        "2 tsp each of cumin\n" +
+                        "1lb of 80% lean beef...","Dinner"));
+
+        list.add(new Recipe("Pancakes","Add batter to large\n" +
+                "mixing bowl\n"+
+                "along with 1 egg...",
+                "flour\n" +
+                        "baking powder\n" +
+                        "Sugar\n" +
+                        "Salt\n" +
+                        "Milk...","Breakfast"));
+
         recipeAdapter = new RecipeAdapter(this, list,this);
 
 
