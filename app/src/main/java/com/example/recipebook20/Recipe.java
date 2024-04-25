@@ -6,20 +6,10 @@ public class Recipe implements Serializable {
 
     private int id;
     private String name;
-
     private String instructions;
     private String ingredients;
     private String recipeType;
-    private int imageID;
 
-    public Recipe(String name, String instructions, String ingredients, String recipeType, int recipeImage){
-        this.id = 0;
-        this.name=name;
-        this.instructions=instructions;
-        this.ingredients=ingredients;
-        this.recipeType=recipeType;
-        this.imageID=recipeImage;
-    }
     public Recipe(String name, String instructions, String ingredients, String recipeType){
         this.id = 0;
         this.name=name;
@@ -58,7 +48,4 @@ public class Recipe implements Serializable {
     public void setRecipeType(String recipeType) {
         this.recipeType = recipeType;
     }
-    public void setImage(int img) {this.imageID = img; }
-    public int getRecipeImage() { return this.imageID; }
-
 }
