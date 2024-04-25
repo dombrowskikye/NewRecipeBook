@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
 
         originalList.add(new Recipe("Tacos","These are the Instructions","These are the Ingredients","Lunch"));
 
-        list.add(new Recipe("Tacos","Add ground beef and a chopped\n" +
+        list.add(new Recipe("Tacos","Add ground beef and a \nchopped\n" +
                 "onion to a skillet over\n"+
                 "medium-high heat...",
                 "1 chopped onion\n" +
                 "2 TBSP minced garlic\n" +
-                "1 tsp each of salt and pepper\n" +
+                "1 tsp each of salt and \npepper\n" +
                 "1/2 tsp cayenne\n" +
                 "4 tsp chili powder\n" +
                 "2 tsp each of cumin\n" +
@@ -79,12 +79,12 @@ public class MainActivity extends AppCompatActivity implements RecipeAdapter.OnR
                 "Freshly ground black pepper \n" +
                 "4 loosely packed arugula...","Dinner"));
 
-        originalList.add(new Recipe("Hamburger","Add ground beef and a chopped\n" +
+        originalList.add(new Recipe("Hamburger","Add ground beef and a \nchopped\n" +
                 "onion to a skillet over\n"+
                 "medium-high heat...",
                 "1 chopped onion\n" +
                         "2 TBSP minced garlic\n" +
-                        "1 tsp each of salt and pepper\n" +
+                        "1 tsp each of salt and \npepper\n" +
                         "1/2 tsp cayenne\n" +
                         "4 tsp chili powder\n" +
                         "2 tsp each of cumin\n" +

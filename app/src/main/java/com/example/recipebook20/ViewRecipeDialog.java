@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import androidx.fragment.app.DialogFragment;
 
 import com.example.recipebook20.databinding.DialogViewRecipeBinding;
+
+import java.util.Objects;
+
 public class ViewRecipeDialog extends DialogFragment {
 
     private DialogViewRecipeBinding binding;
@@ -31,6 +34,14 @@ public class ViewRecipeDialog extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         binding = DialogViewRecipeBinding.inflate(LayoutInflater.from(getContext()));
+
+        if (Objects.equals(recipe.getRecipeType(), "Breakfast")) {
+            binding.imageView.setImageResource(R.drawable.breakfast);
+        } else if (Objects.equals(recipe.getRecipeType(), "Lunch")) {
+            binding.imageView.setImageResource(R.drawable.lunch);
+        } else if (Objects.equals(recipe.getRecipeType(), "Dinner")) {
+            binding.imageView.setImageResource(R.drawable.dinner);
+        }
 
         binding.textViewName.setText(recipe.getName());
         binding.textViewInstructions.setText(recipe.getInstructions());
